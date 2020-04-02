@@ -1,0 +1,6 @@
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
+export const ADD = 'ADD'
+export const SUBTRACT = 'SUBTRACT'
+export const BTN_ADD = 'BTN_ADD'
+export const BTN_DEL = 'BTN_DEL'
