@@ -12,5 +12,16 @@ export const decrement = () => ({type: DECREMENT})
 export const add = (val) => ({type: ADD, value: val})
 export const subtract = (val) => ({type: SUBTRACT, value: val})
 
-export const addResult = () => ({type: BTN_ADD})
+export const saveAddedResult = () => ({type: BTN_ADD})
 export const deleteResult = (id) => ({type: BTN_DEL, DeleteID: id})
+
+
+export const addResult = () => {
+    return dispatch => {
+        setTimeout(
+            () => {
+                dispatch (saveAddedResult())
+            }, 3000
+        )
+    }
+}

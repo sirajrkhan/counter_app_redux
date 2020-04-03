@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
-import * as actionCreaters from '../../store/actions/actions'
+import * as actionCreaters from '../../store/actions/actionTypes'
 
 const counter = (props) => {
     const left = {
