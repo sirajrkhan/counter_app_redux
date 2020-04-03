@@ -8,8 +8,6 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import reducer from './store/reducer';
 
-
-
 const logger = store => {
     return next => {
         return action => {

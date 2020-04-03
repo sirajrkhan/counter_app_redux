@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
-import * as actionTypes from '../../store/actions'
+import * as actionCreaters from '../../store/actions/actions'
 
 const counter = (props) => {
     const left = {
@@ -43,12 +43,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAddBtnClick: () => dispatch({type: actionTypes.BTN_ADD}),
-        onDelBtnClick: (id) => dispatch({type: actionTypes.BTN_DEL, DeleteID: id}),
-        onIncrementCounter: () => dispatch({type: actionTypes.INCREMENT}),
-        onDecrementCounter: () => dispatch({type: actionTypes.DECREMENT}),
-        onAddCounter: () => dispatch({type: actionTypes.ADD, value: 11}),
-        onSubtractCounter: () => dispatch({type: actionTypes.SUBTRACT, value: 9})
+        onAddBtnClick: () => dispatch(actionCreaters.addResult()),
+        onDelBtnClick: (id) => dispatch(actionCreaters.deleteResult(id)),
+        onIncrementCounter: () => dispatch(actionCreaters.increment()),
+        onDecrementCounter: () => dispatch(actionCreaters.decrement()),
+        onAddCounter: () => dispatch(actionCreaters.add(12)),
+        onSubtractCounter: () => dispatch(actionCreaters.subtract(7))
     };
 };
 
